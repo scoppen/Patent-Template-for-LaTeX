@@ -1,0 +1,133 @@
+\newcommand{\prior}{(Prior Art)}
+\newcommand{\none}{}
+
+\let\tempnocite\nocite
+\renewcommand{\cite}[1]{%
+  \tempnocite{#1}%
+  \bibentry{#1}%
+}
+
+\let\tempclearpage\clearpage
+\renewcommand\clearpage{%
+  \tempclearpage%
+  \vspace*{0in}%
+}
+
+\newcounter{para}
+\setcounter{para}{0}
+\newcounter{claim}
+\setcounter{claim}{0}
+\newcounter{figpage}
+\setcounter{figpage}{0}
+\newcounter{totfigpages}
+\setcounter{totfigpages}{0}
+\label{pg:last}
+\label{pg:drawings}
+
+
+\renewcommand{\description}[1]{%
+  \newpage%
+  \vspace*{12pt}%
+  \begin{center}
+    #1\\%
+    \vspace{12pt}%
+    \uppercase{description}\\%
+    %\vspace{12pt}%
+  \end{center}%
+}
+
+\newcommand{\claims}{
+  \newpage%
+  \vspace*{12pt}%
+  \begin{center}
+    \vspace{12pt}%
+    What is claimed is:\\%
+    %\vspace{12pt}%
+  \end{center}%
+}
+
+\renewcommand{\abstract}{
+  \newpage%
+  \vspace*{12pt}%
+  \begin{center}
+    \vspace{12pt}%
+    \uppercase{abstract}\\%
+    %\vspace{12pt}%
+  \end{center}%
+}
+
+\newcommand{\drawings}{
+  \newpage%
+%  \vspace*{-.4in}%
+%  \addtolength\textheight{-.9in}%
+  \addtocounter{figpage}{1}%
+  \label{pg:drawings}%
+  \setcounter{totfigpages}{\pageref{pg:last}}%
+  \addtocounter{totfigpages}{-\pageref{pg:drawings}}%
+  \addtocounter{totfigpages}{1}%
+  \fancyhead[c]{%
+    \begin{center}%
+      \begin{minipage}[t]{5.0in}
+        Title of Invention:\hfill\tit\\%
+        Name of Inventor:\hfill\auth\\%
+        Contact Phone Number:\hfill\phon%
+        \vspace*{-0.35in}%
+      \end{minipage}
+    \end{center}%
+    \vspace*{-.1in}%
+    \hspace*{6.5in}%
+    \rule{.5pt}{.8in}%
+    \hspace*{-.4in}%
+    \rule[.4in]{.8in}{.5pt}%
+    \vspace*{-.7in}%
+    \setcounter{figpage}{\thepage}%
+    \addtocounter{figpage}{-\pageref{pg:drawings}}%
+    \addtocounter{figpage}{1}%
+    \begin{center}%
+      {\singlespacing \thefigpage{ }---{ }\thetotfigpages}%
+    \end{center}%
+    \vspace*{-42pt}
+  }
+  \fancyfoot[l]{
+    \vspace*{-0.75in}%
+    \rule{.5pt}{.8in}%
+    \hspace*{-.4in}%
+    \rule[.4in]{.8in}{.5pt}%
+  }
+}
+
+\newcommand{\heading}[1]{%
+  \vspace*{24pt}%
+  \raggedright{%
+    \uppercase{#1}\\%
+    \vspace{12pt}%
+  }%
+}
+
+\newcommand{\pa}{%
+  \raggedright{%
+    \addtocounter{para}{1}%
+    \uppercase{[para \textbf{\thepara]}}%
+    \hspace{12pt}%
+  }%
+}
+
+\newcommand{\cl}{%
+  \raggedright{%
+    \addtocounter{claim}{1}%
+    \uppercase{[claim \textbf{\theclaim]}}%
+    \hspace{12pt}%
+  }%
+}
+
+\newcommand{\cll}[1]{%
+  claim \textbf{#1}%
+}
+
+\newcommand{\listspace}{%
+  \setlength{\leftmargin}{.2in}%
+  \setlength{\topsep}{0pt}%
+  \setlength{\itemindent}{-.1in}%
+  \setlength{\itemsep}{0pt}%
+}
+

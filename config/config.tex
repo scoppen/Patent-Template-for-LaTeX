@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{array}
+\usepackage{rotating}
+\usepackage{setspace}
+  %\singlespacing
+  %\onehalfspacing
+  \doublespacing
+\usepackage{mathptm}
+\usepackage{amsmath}
+\usepackage{psfrag}
+%\usepackage{cite}
+\usepackage{bibentry}
+\usepackage{fancyhdr}
+
+\hoffset=-1.0in
+\oddsidemargin=1.0in
+\marginparwidth=0pt
+\marginparsep=0pt
+\textwidth=6.5in
+
+\voffset=-1.0in
+\topmargin=6pt
+\headheight=66pt
+\headsep=0.2in
+\textheight=8.8in
+
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot[c]{
+  Page \thepage{ }of \pageref{pg:last}\\
+}
+
+\renewcommand{\paragraph}[1]{%
+  \begin{center}
+    #1\\%
+  \end{center}%
+}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\makeatletter
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  %\sbox\@tempboxa{#1: #2}%
+  \sbox\@tempboxa{\Large{#1 #2}}%
+  \ifdim \wd\@tempboxa >\hsize
+    #1: #2\par
+  \else
+    \global \@minipagefalse
+   \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}
+\makeatother
+
+% figure customization
+\renewcommand\figurename{\large{}}
+\renewcommand{\thefigure}{FIG. \textbf{\arabic{figure}}}
+\renewcommand{\abovecaptionskip}{0pt}
+%\renewcommand{\belowcaptionskip}{20pt}
+%\makeatletter
+%\setlength{\@fpsep}{-10pt}
+%\makeatother
+
+% subfigure customization
+\renewcommand{\thesubfigure}{\thefigure\MakeUppercase{\bfseries\selectfont\alph{subfigure}}}
+\captionsetup[subfigure]{font=large,labelformat=simple,listofformat=subsimple}
+\captionsetup{lofdepth=2}
+\makeatletter
+\renewcommand{\p@subfigure}{}
+\makeatother
+
+\setcounter{topnumber}{10}
+\setcounter{bottomnumber}{10}
+\setcounter{totalnumber}{10}
+\renewcommand{\topfraction}{.9}
+\renewcommand{\bottomfraction}{.9}
+\renewcommand{\textfraction}{.1}
+
+\bibliographystyle{config/patent}
+
+\input{config/commands.def}
+
+%\let\tempmarginpar\marginpar
+%\renewcommand\marginpar[1]{\tempmarginpar[\raggedleft\tiny\sf #1]{\raggedright\tiny\sf #1}}
+%\setlength{\marginparwidth}{0.5in}
+
+% turns off marginpar
+%\renewcommand\marginpar[1]{}
+
