@@ -1,11 +1,3 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Feature enumerations portion of the patent                         %%
 
-\newcommand{\eraser}{eraser \textbf{1}}
-\newcommand{\erasercup}{eraser cup \textbf{2}}
-
-\newcommand{\pencil}{pencil \textbf{17}}
-
-\newcommand{\pencillead}{pencil lead \textbf{16}}
-\newcommand{\pencilleads}{pencil leads \textbf{16}}
-
