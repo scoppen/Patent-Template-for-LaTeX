@@ -21,7 +21,7 @@ clean:
 %.dvi: abstract.tex attributes.def background.tex claims.tex description.tex field.tex relations.tex summary.tex
 	-latex -interaction=nonstopmode $*.tex
 	latex $*.tex
-	bibtex $*
+	-bibtex $*
 	latex $*.tex
 
 %.tex:
