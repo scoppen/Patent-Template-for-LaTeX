@@ -21,7 +21,6 @@
 \setcounter{figpage}{0}
 \newcounter{totfigpages}
 \setcounter{totfigpages}{0}
-\label{pg:last}
 \label{pg:drawings}
 
 
@@ -62,7 +61,7 @@
 %  \addtolength\textheight{-.9in}%
   \addtocounter{figpage}{1}%
   \label{pg:drawings}%
-  \setcounter{totfigpages}{\pageref{pg:last}}%
+  \setcounter{totfigpages}{\pageref{LastPage}}%
   \addtocounter{totfigpages}{-\pageref{pg:drawings}}%
   \addtocounter{totfigpages}{1}%
   \fancyhead[c]{%
@@ -107,7 +106,18 @@
 \newcommand{\pa}{%
   \raggedright{%
     \addtocounter{para}{1}%
-    \uppercase{[para \textbf{\thepara]}}%
+    \ifthenelse{\value{para}<10}
+      {\textbf{[000\thepara]}}
+      {\ifthenelse{\value{para}<100}
+        {\textbf{[00\thepara]}}
+        {\ifthenelse{\value{para}<1000}
+          {\textbf{[0\thepara]}}
+          {\ifthenelse{\value{para}<10000}
+            {\textbf{[\thepara]}}
+            {}
+          }
+        }
+      }
     \hspace{12pt}%
   }%
 }
