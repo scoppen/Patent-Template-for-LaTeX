@@ -1,0 +1,153 @@
+%% -- SECTION: 1: drawings/features.def 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Feature enumerations portion of the patent                         %%
+
+%% -- SECTION: 2: inventors.def
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% begins document and defines \tit, \auth, and \phon %%
+
+\newcommand{\tit}{Put your invention title here}
+\newcommand{\auth}{Put your name here}
+\newcommand{\phon}{Put your phone number here}
+
+%% -- SECTION: 3: relations.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ------------  Cross-references portion of the patent ------------- %%
+%%
+%% NOTES:
+%%  - Cross-reference to any related provisional or utility
+%%    application.
+%%  - Model usable form:
+%%    -> The present application claims the benefit of the filing
+%%       date of a co-pending ____ [Provisional or Utility]
+%%       Application, Serial Number ____, entitled "____", filed
+%%       on ____.
+%%
+
+%% -- SECTION: 4: field.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% -----------  Field of invention portion of the patent ------------ %%
+%%
+%% NOTES:
+%%  - Denotes the general field of the invention and the particular
+%%    field.
+%%  - Typically 2 sentences are used such as:
+%%    -> This invention relates to ____.  More particularily, it
+%%       relates to ____.
+%%
+%% FORMATTING:
+%%  \pa starts a new paragraph and numbers it sequentially             %%
+
+%% -- SECTION: 5: background.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ---------  Background description portion of the patent  --------- %%
+%%
+%% NOTES:
+%%  - Include a description of prior art (typically 2 to 4 pages)
+%%  - Provide a brief historical information, followed by present
+%%    products and methods, especially those found in uncovered
+%%    patents.
+%%  - Describe a problem with prior products which your invention
+%%    (not described here) solves
+%%  - Objects of the invention:
+%%    -> What existing problems you intend the invention to resolve.
+%%       They should match up with the problem(s) you have mentioned
+%%       above with the prior art.
+%%    -> Limit the number of objects to 3 or 4.
+%%    -> Use the following forms to create single-sentence objects:
+%%       => A primary object of the inventions is ___.
+%%       => Another general object of the invention is ___.
+%%       => Another general object of the invention is ___.
+%%       => A more specific object, commensurate with the above
+%%          listed objects is ___.
+%%
+%% FORMATTING:
+%%  \pa starts a new paragraph and numbers it sequentially             %%
+
+%% -- SECTION: 6: summary.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% -----------------  Summary portion of the patent ----------------- %%
+%%
+%% NOTES:
+%%  - Provide a short description of the invention
+%%  - Summarize the basic structure of the invention
+%%    -> Main components only
+%%  - Summarize how the structure works in a very cryptic way
+%%  - Use no more than 4 paragraphs
+%%
+%% FORMATTING:
+%%  \pa starts a new paragraph and numbers it sequentially             %%
+
+%% -- SECTION: 7: drawings/description.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ------  Brief description of drawings portion of the patent  ----- %%
+%%
+%% NOTES:
+%%  - Summarize each drawing in one sentence per drawing
+%%    -> Example: "FIG. 1 is a side view of the machine constructed 
+%%                 in accordance with the present invention"
+%%                "FIG. 2 show a section view along the ...
+%%                 with portions broken away for clarity"
+%%
+%% FORMATTING:
+%%  \pa starts a new paragraph and numbers it sequentially             %%
+
+%% -- SECTION: 8: description.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% -------------  Detailed description of the patent  --------------- %%
+%%
+%% NOTES:
+%%  - Describe how the invention is made and how it works referencing
+%%    the drawings.  Charts and tables can be included in the text of
+%%    the application but are kept separate as drawings.
+%%  - Start with a 'birdseye' paragraph that names the major
+%%    components and a short phrase after each describing their
+%%    functions.  Identifying those components with even reference
+%%    numbers, starting with the number 10 to identify the preferred
+%%    embodiment.
+%%  - Number the parts chronologically (in 'drawings/features.def') 
+%%  - Describe each of the major components in separate paragraphs
+%%    after the birdseye paragraph.  Refer the reader to the drawing
+%%    FIG. that best shows that component.
+%%  - Typically, description of how the inventions works is found
+%%    after the description of the structure (although embedding this
+%%    information during the description of the structure might be
+%%    easier for certain inventions).
+%%  - The application as a whole must show how to MAKE and how to USE
+%%    the invention.  If both of these are not clearly expressed, the
+%%    Patent Office may reject the application.
+%%  - Some examiners can be very 'dense' - it is best to add language
+%%    pertaining to how, when, and where your invention is to be used.
+%%
+%% FORMATTING:
+%%  \pa starts a new paragraph and numbers it sequentially             %%
+
+%% -- SECTION: 9: claims.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% -----------------  Claims portion of the patent  ----------------- %%
+%%                                                                    %%
+%% NOTE: Claims MUST be written by someone with extensive experience  %%
+%%     : DO NOT ATTEMPT UNLESS YOU KNOW WHAT YOU ARE DOING!!          %%
+%%     : Every word counts and can make a huge difference             %%
+%%                                                                    %%
+%% \cl is a counter to start a claim with sequential number           %%
+%% \cll{X} refers to claim number X                                   %%
+
+%% -- SECTION: 10: abstract.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ---------------------  Abstract portion of patent  --------------- %%
+%%
+
+%% -- SECTION: 11: drawings/drawings.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% -----------------  Drawings portion of the patent  --------------- %%
+%%                                                                    %% 
+%% NOTES:                                                             %%
+%% do drawings with any drawing software, i.e. xfig, photoshop        %%
+%% save drawing in eps format with tight bounding box option enabled  %%
+%%
+%% FOR SUBFLOATS: Make sure to add the following:
+%%    \addtocounter{figure}{1} 
+%%    \setcounter{subfigure}{0}
+%%
+
