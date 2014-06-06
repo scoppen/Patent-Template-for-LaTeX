@@ -2,8 +2,7 @@
 %% Second author: Scott Coppen (scoppen@swc-systems.com)
 %%
 
-OVERVIEW:
----------
+## OVERVIEW:
 
 This repository is explicitly designed to be used a submodule - please refer
 to information below for intructions on how to perform the initial setup.
@@ -12,20 +11,21 @@ specification, drawings, and claims guidelines. They are simple modifications
 to the article class.
 
 
-INITIAL SETUP:
---------------
+## INITIAL SETUP:
 
-1. Initialize the local directory as a Git repository: 
+1. Initialize the local directory as a Git repository:
 
-    $ git init
+        $ git init
 
 2. Add the 'Patent-Template-for-LaTeX' submodule as the 'config' directory:
 
-    $ git submodule add git://github.com/scoppen/Patent-Template-for-LaTeX.git config
+        $ git submodule add git://github.com/scoppen/Patent-Template-for-LaTeX.git config
+        
+   NOTE: The submodule must be located within a sub-directory named 'config'!
 
 3. Build the default LaTeX file 'stubs':
 
-    $ make -f config/Makefile provisional
+        $ make -f config/Makefile provisional
 
    This command will create a local Makefile as well as all the necessary
    LaTeX file stubs for the patent.
@@ -33,18 +33,20 @@ INITIAL SETUP:
 
 4. Commit your work:
 
-    $ git commit -m 'Initial commit'
+        $ git commit -m 'Initial commit'
 
+   NOTE: You should add the generated files (inventors.def, etc.) to your Git
+   repo but it is probably not advisable to use a publicly accessible remote host
+   for these files.  I would recommend using a local repository that is backed up
+   or use Gitolite within a firewall protected LAN.
 
-COMPILING:
-----------
+## COMPILING:
 
 Type 'make' at the command line.  The patent will be compiled as 'patent.pdf'.
-NOTE: The files in the 'config' directory are not intended to be modified.
+The files in the 'config' sub-directory are not intended to be modified.
 
 
-FILES:
-------
+## FILES:
 
 Makefile		GNU make compatible makefile
 README			This file
@@ -59,19 +61,21 @@ utility.def		LaTeX file stubs for utility patents (do not modify)
 utility.tex		Formatting for utility patents (do not modify)
 
 
-DRAWINGS:
----------
+## DRAWINGS:
 
-Drawings are quite easy to do, just follow the basic guidelines in the
-USPTO's `Guide to Filing A Non-Provisional (Utility) Patent Application'. 
+Drawings for non-design patents are quite easy to do - just follow the
+guidelines in the USPTO's `Guide to Filing A Non-Provisional (Utility)
+Patent Application'. 
 Basically, drawing with black ink or computer, use only that ink for all
 shading (no grey, use dots or lines for shading), use zebra stripes for
 cross sections, make all numbers and letters legibly large, and make the
 line going from each number or letter to the feature clear and unambiguous.
 
+For design patents, the drawings can be much more difficult to generate
+properly.  Make sure to consult the assistance of an experienced
+professional if you are unsure!
 
-SUPPORT/WARRANTY:
------------------
+##SUPPORT/WARRANTY:
 
 There is no support or warranty provided for the use of this template. 
 The authors wrote it because using LaTeX for filing patent applications is a
