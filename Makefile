@@ -15,7 +15,7 @@ utility-config: config-cp
 		config/parse.awk config/utility.def; \
 	fi
 
-provisional-cp: config-cp
+provisional-config: config-cp
 	cp config/provisional.tex patent.tex
 	if [ ! -f Makefile ]; then \
 		cp -f config/Makefile . ; \
@@ -23,7 +23,7 @@ provisional-cp: config-cp
 		config/parse.awk config/provisional.def; \
 	fi
 
-design-cp: config-cp
+design-config: config-cp
 	cp config/design.tex patent.tex
 	if [ ! -f Makefile ]; then \
 		cp -f config/Makefile . ; \
