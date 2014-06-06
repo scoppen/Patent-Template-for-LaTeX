@@ -1,0 +1,77 @@
+%% -- SECTION: 1: drawings/features.def 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Feature enumerations portion of the patent                         %%
+
+%% -- SECTION: 2: inventors.def
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% begins document and defines \tit, \auth, and \phon %%
+
+\newcommand{\tit}{Put your invention title here}
+\newcommand{\auth}{Put your name here}
+\newcommand{\phon}{Put your phone number here}
+
+%% -- SECTION: 3: relations.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ------------  Cross-references portion of the patent ------------- %%
+%%
+%% NOTES:
+%%  - Cross-reference to any related provisional or utility
+%%    application.
+%%  - Model usable form:
+%%    -> The present application claims the benefit of the filing
+%%       date of a co-pending ____ [Provisional or Utility]
+%%       Application, Serial Number ____, entitled "____", filed
+%%       on ____.
+%%
+
+%% -- SECTION: 4: specification.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% --------------  Specification portion of the patent -------------- %%
+%%
+%% NOTES:
+%%  - Summarize the intention of the application and the use of the
+%%    object in two sentences
+%%    -> Example: "I, \auth\, have invented a new deesign for a XX,
+%%                 as set forth in the following specification.
+%%                 The claimed XX is used to XX. 
+%%
+
+%% -- SECTION: 5: drawings/description.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ------  Brief description of drawings portion of the patent  ----- %%
+%%
+%% NOTES:
+%%  - Summarize each drawing in one sentence per drawing
+%%    -> Example: "FIG. 1 is a side view of the machine constructed 
+%%                 in accordance with the present invention"
+%%                "FIG. 2 show a section view along the ...
+%%                 with portions broken away for clarity"
+%%  - If broken lines are used for illustrative purposes (forms no 
+%%    part of the claimed design), a statement must be included that
+%%    indicates this situation.
+%%
+%% FORMATTING:
+%%  \pa starts a new paragraph and numbers it sequentially             %%
+
+%% -- SECTION: 6: claim.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% --------------  Claim portion of the design patent  -------------- %%
+%%                                                                    %%
+%% NOTE: Design patents may only have one claim
+%%     : Example: "The ornamental design for a XX, as shown and
+%%                 desribed"
+%%                                                                    %%
+
+%% -- SECTION: 7: drawings/drawings.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% -----------------  Drawings portion of the patent  --------------- %%
+%%                                                                    %% 
+%% NOTES:                                                             %%
+%% do drawings with any drawing software, i.e. xfig, photoshop        %%
+%% save drawing in eps format with tight bounding box option enabled  %%
+%%
+%% FOR SUBFLOATS: Make sure to add the following:
+%%    \addtocounter{figure}{1} 
+%%    \setcounter{subfigure}{0}
+%%
+
