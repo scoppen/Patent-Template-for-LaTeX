@@ -1,61 +1,62 @@
 %% NOTE: This is based on the efforts of Erik Chmelar (echmelar@yahoo.com) %%
 %% Second author: Scott Coppen (scoppen@swc-systems.com)
 %%
-%% Branch: USletter
-%%   Info: Specifically formatted for 8.5" x 11.0" paper dimensions
-%%         Example patent data removed
 
 OVERVIEW:
 ---------
 
+This repository is explicitly designed to be used a submodule - please refer
+to information below for intructions on how to perform the initial setup.
 These files are specifially modified to conform to the USPTO's patent
 specification, drawings, and claims guidelines. They are simple modifications
 to the article class.
 
 
-FILES:
-------
+INITIAL SETUP:
+--------------
 
-config/commands.def	Applicable environment/commands (do not modify)
-config/config.tex	Document package configuration (do not modify)
-config/patent.bst	Formatting of \cite{} references (do not modify)
-config/provisional.tex	Formatting for provisional patents (do not modify)
-config/utility.tex	Formatting for utility patents (do not modify)
+1. Initialize the local directory as a Git repository: 
 
-drawings/description.tex		Brief description of the drawings
-drawings/drawings.tex			Drawings portions (list of figures)
-drawings/features.def			Enumeration of drawing features
-drawings/assembly3-labeled.ps		Example figure
-drawings/cross-side-advance-labeled.ps	Example figure
-drawings/cross-side-normal-labeled.ps	Example figure
-drawings/cross-side-retract-labeled.ps	Example figure
-drawings/front-labeled.ps		Example figure
+    $ git init
 
-Makefile		GNU make compatible makefile
-README			This file
-abstract.tex		Abstract portion of the patent (for utility patents)
-background.tex		Background portion of the patent
-claims.tex		Claims portion of the patent (for utility patents)
-description.tex		Detailed description of the invention
-field.tex		Field of invention portion of the patent
-inventors.def		Definition of patent authors 
-references.bib		Bibliography of cited patents and general references
-relations.tex		Cross-references portion of the patent (if any)
-summary.tex		Summary portion of the patent
+2. Add the 'Patent-Template-for-LaTeX' submodule as the 'config' directory:
+
+    $ git submodule add git://github.com/scoppen/Patent-Template-for-LaTeX.git config
+
+3. Build the default LaTeX file 'stubs':
+
+    $ make -f config/Makefile provisional
+
+   This command will create a local Makefile as well as all the necessary
+   LaTeX file stubs for the patent.
+   NOTE: The template also supports 'utility' or 'design' patent templates.
+
+4. Commit your work:
+
+    $ git commit -m 'Initial commit'
 
 
 COMPILING:
 ----------
 
-Type 'make' at the command line.  By default, the provisional version of the
-patent will be compiled.  To construct the general utility patent, type
-'make utility' at the command line.
+Type 'make' at the command line.  The patent will be compiled as 'patent.pdf'.
+NOTE: The files in the 'config' directory are not intended to be modified.
 
 
-WRITING YOUR PATENT SPEC:
--------------------------
+FILES:
+------
 
-Only the files under the 'config' directory are not intended to be modified.
+Makefile		GNU make compatible makefile
+README			This file
+commands.def		Applicable environment/commands (do not modify)
+config.tex		Document package configuration (do not modify)
+patent.bst		Formatting of \cite{} references (do not modify)
+design.def		LaTeX file stubs for design patents (do not modify)
+design.tex		Formatting for design patents (do not modify)
+provisional.def		LaTeX file stubs for provisional patents (do not modify)
+provisional.tex		Formatting for provisional patents (do not modify)
+utility.def		LaTeX file stubs for utility patents (do not modify)
+utility.tex		Formatting for utility patents (do not modify)
 
 
 DRAWINGS:
@@ -75,5 +76,4 @@ SUPPORT/WARRANTY:
 There is no support or warranty provided for the use of this template. 
 The authors wrote it because using LaTeX for filing patent applications is a
 natural fit - and providing it to the public is a nice thing to do.
-
 
