@@ -54,18 +54,20 @@ The files in the 'config' sub-directory are not intended to be modified.
 
 ## FILES:
 
-Makefile		GNU make compatible makefile
-README			This file
-commands.def		Applicable environment/commands (do not modify)
-config.tex		Document package configuration (do not modify)
-patent.bst		Formatting of \cite{} references (do not modify)
-design.def		LaTeX file stubs for design patents (do not modify)
-design.tex		Formatting for design patents (do not modify)
-provisional.def		LaTeX file stubs for provisional patents (do not modify)
-provisional.tex		Formatting for provisional patents (do not modify)
-utility.def		LaTeX file stubs for utility patents (do not modify)
-utility.tex		Formatting for utility patents (do not modify)
-
+| Filename      | Purpose        |
+| :------------ |:---------------|
+| Makefile		 | GNU make compatible makefile |
+| README.md		 | This file |
+| commands.def	 | Applicable environment/commands  |
+| config.tex	|	Document package configuration  |
+| patent.bst	|	Formatting of \cite{} references |
+| design.def	|	LaTeX file stubs for design patents  |
+| design.tex	|	Formatting for design patents  |
+| provisional.def	|	LaTeX file stubs for provisional patents |
+| provisional.tex	|	Formatting for provisional patents |
+| utility.def	|	LaTeX file stubs for utility patents |
+| utility.tex	|	Formatting for utility patents  |
+ 
 
 ## DRAWINGS:
 
