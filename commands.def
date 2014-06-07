@@ -23,12 +23,29 @@
 \setcounter{totfigpages}{0}
 \label{pg:drawings}
 
+\renewcommand{\titlepage}[2]{%
+  \newpage%
+  \vspace*{24pt}%
+  \begin{center}
+    \MakeUppercase{Design Patent Application}\\%
+    \vspace{36pt}%
+    \MakeUppercase{of}\\%
+    \vspace{36pt}%
+    \MakeUppercase{#2}\\%
+    \vspace{36pt}%
+    \MakeUppercase{for}\\%
+    \vspace{36pt}%
+    \MakeUppercase{#1}\\%
+    %\vspace{12pt}%
+  \end{center}%
+  \newpage%
+}
 
 \renewcommand{\description}[1]{%
   \newpage%
   \vspace*{12pt}%
   \begin{center}
-    #1\\%
+    \MakeUppercase{#1}\\%
     \vspace{12pt}%
     \uppercase{description}\\%
     %\vspace{12pt}%
@@ -43,6 +60,11 @@
     What is claimed is:\\%
     %\vspace{12pt}%
   \end{center}%
+}
+
+\newcommand{\claim}{
+  \vspace*{12pt}%
+  I claim: %
 }
 
 \renewcommand{\abstract}{
@@ -67,7 +89,7 @@
   \fancyhead[c]{%
     \begin{center}%
       \begin{minipage}[t]{5.0in}
-        Title of Invention:\hfill\tit\\%
+        Title of Invention:\hfill\MakeUppercase{\tit}\\%
         Name of Inventor:\hfill\auth\\%
         Contact Phone Number:\hfill\phon%
         \vspace*{-0.35in}%

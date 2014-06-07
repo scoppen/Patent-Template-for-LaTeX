@@ -1,8 +1,0 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% begins document and defines \tit, \auth, and \phon %%
-
-\newcommand{\tit}{Put your invention title here}
-\newcommand{\auth}{Put your name here}
-\newcommand{\phon}{Put your phone number here}
-
-
