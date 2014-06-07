@@ -10,6 +10,12 @@ These files are specifially modified to conform to the USPTO's patent
 specification, drawings, and claims guidelines. They are simple modifications
 to the article class.
 
+## REQUIREMENTS
+
+Command line interface with the following programs/utilities available
+   - LaTeX with the 'graphicx', 'subfig', 'psfrag', and 'fancyhdr' packages
+   - GNU make
+   - awk
 
 ## INITIAL SETUP:
 
