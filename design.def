@@ -1,4 +1,4 @@
-%% -- SECTION: 1: drawings/features.def 
+%% -- SECTION: 1: drawings/features.def
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Feature enumerations portion of the patent                         %%
 
@@ -74,4 +74,31 @@
 %%    \addtocounter{figure}{1} 
 %%    \setcounter{subfigure}{0}
 %%
+
+%% -- SECTION: 8: Makefile
+input := patent.tex
+output := patent.pdf
+
+default: $(output)
+
+clean:
+	rm -rf $(output)
+	rm -rf *.log *.aux *.bbl *.blg
+
+%.pdf: %.ps
+	ps2pdf $*.ps $*.pdf
+	rm patent.tex
+
+%.ps: %.dvi
+	dvips -f $*.dvi > $*.ps
+
+%.dvi: %.tex
+	-latex -interaction=nonstopmode $*.tex
+	latex $*.tex
+	-bibtex $*
+	latex $*.tex
+
+%.tex:
+
+attributes.def:
 

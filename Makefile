@@ -1,33 +1,18 @@
-input := patent.tex
-output := patent.pdf
-
-utility: utility-config $(output)
-
-provisional: provisional-config $(output)
-
-design: design-config $(output)
-
-utility-config: config-cp
+utility: config-cp parse-awk-prep
 	cp config/utility.tex patent.tex
 	if [ ! -f Makefile ]; then \
-		cp -f config/Makefile . ; \
-		echo "default: utility" >> Makefile ; \
 		config/parse.awk config/utility.def; \
 	fi
 
-provisional-config: config-cp
+provisional: config-cp parse-awk-prep
 	cp config/provisional.tex patent.tex
 	if [ ! -f Makefile ]; then \
-		cp -f config/Makefile . ; \
-		echo "default: provisional" >> Makefile ; \
 		config/parse.awk config/provisional.def; \
 	fi
 
-design-config: config-cp
+design: config-cp parse-awk-prep
 	cp config/design.tex patent.tex
 	if [ ! -f Makefile ]; then \
-		cp -f config/Makefile . ; \
-		echo "default: design" >> Makefile ; \
 		config/parse.awk config/design.def; \
 	fi
 
@@ -36,24 +21,8 @@ config-cp:
 		mkdir -p drawings; \
 	fi
 
-clean:
-	rm -rf $(input) $(output)
-	rm -rf *.log *.aux *.bbl *.blg
-
-%.pdf: %.ps
-	ps2pdf $*.ps $*.pdf
-	rm patent.tex
-
-%.ps: %.dvi
-	dvips -f $*.dvi > $*.ps
-
-%.dvi: %.tex
-	-latex -interaction=nonstopmode $*.tex
-	latex $*.tex
-	-bibtex $*
-	latex $*.tex
-
-%.tex:
-
-attributes.def:
+parse-awk-prep:
+	if [ ! -x config/parse.awk ]; then \
+		chmod a+x config/parse.awk ; \
+	fi
 
